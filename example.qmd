@@ -1,0 +1,35 @@
+---
+title: "Mandy Ma"
+image: pics/headshot.jpg
+about:
+  template: broadside
+  links:
+
+    - icon: github/envelope/linkedin
+      text: Github
+      href: https://github.com
+
+---
+
+:::{#hero-heading}
+
+Heading
+
+## Education
+
+Columbia University | New York, NY
+M.A in Quantitative Methods in Social Science | Sep 2022 - Feb 2024
+
+
+## Experience
+
+Honor Device Co., Ltd.  | General Software Engineer  | Apr 2024 – Jan 2025
+
+
+# H1
+## H2
+### H3
+
+#### Insert images
+![](pathtoyoutimage){fig-alt="alternative msg if your image doesn't show"}
+[TEXT](address)

@@ -1,0 +1,41 @@
+---
+title: "Mandy Ma"
+image: pics/headshot.jpg
+about:
+  template: broadside
+  links:
+
+    - icon: github
+      text: Github
+      href: https://github.com
+    - icon: envelope
+      text: E-mail
+      href: mailto:yuxumaaa@gmail.com
+    - icon: linkedin
+      text: LinkedIn
+      href: https://linkedin.com/in/yuxuan-ma
+      
+---
+
+:::{#hero-heading}
+
+Experienced Software Engineer and Data Scientist specializing in Android Framework development, machine learning applications, and data automation. Proven track record in delivering efficient, scalable solutions that improve performance and user experience. Adept at developing robust ETL pipelines and software optimization strategies.
+
+## Education
+
+Columbia University | New York, NY
+M.A in Quantitative Methods in Social Science | Sep 2022 - Feb 2024
+
+University of California, San Diego | San Diego, CA
+B.S in Data Science | Sept 2017 - June 2021
+
+
+## Experience
+
+Honor Device Co., Ltd.  | General Software Engineer  | Apr 2024 – Jan 2025
+
+Columbia University | Research Assistant  | Sept 2012 - Sep 2022 – Jan 2024
+
+Leishen Intelligent System Co., Ltd. | Global System Engineer  | Jan 2022 – Aug 2022
+
+Huawei Technologies Co., Ltd. | Software Development Intern  | Jun 2020 – Oct 2020

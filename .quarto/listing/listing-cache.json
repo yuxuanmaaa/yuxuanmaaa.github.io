@@ -1,0 +1,9 @@
+{
+  "listingMap": {
+    "project/projects.qmd": [
+      ".",
+      "!sup/*",
+      "*"
+    ]
+  }
+}

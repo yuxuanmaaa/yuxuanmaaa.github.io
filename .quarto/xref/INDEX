@@ -1,0 +1,32 @@
+{
+  "contact.qmd": {
+    "contact.html": "aba3f4f4"
+  },
+  "projects.qmd": {
+    "projects.html": "0916b356"
+  },
+  "index.qmd": {
+    "index.html": "b21013ce"
+  },
+  "about.qmd": {
+    "about.html": "a98d2951"
+  },
+  "cv.qmd": {
+    "cv.html": "0a701a2c"
+  },
+  "project/projects.qmd": {
+    "projects.html": "3a60b46b"
+  },
+  "example.qmd": {
+    "example.html": "f30a0ad2"
+  },
+  "project/NLP/index.qmd": {
+    "index.html": "07a66787"
+  },
+  "project/NLP/Word2Vec.qmd": {
+    "Word2Vec.html": "9525cdd8"
+  },
+  "project/NLP/sup/Word2Vec.qmd": {
+    "Word2Vec.html": "6c4047c3"
+  }
+}

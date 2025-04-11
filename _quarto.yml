@@ -1,0 +1,29 @@
+project:
+  type: website
+
+publish:
+  target: gh-pages
+
+website:
+  title: "Mandy Ma"
+  navbar:
+    left:
+      - text: About You
+        href: about.qmd
+      - text: Projects
+        href: project/projects.qmd
+      - text: CV
+        href: cv.qmd
+      - text: Contact
+        href: contact.qmd
+
+format:
+  html:
+    theme:
+      - cosmo
+      - brand
+    css: styles.css
+    toc: true
+
+
+
