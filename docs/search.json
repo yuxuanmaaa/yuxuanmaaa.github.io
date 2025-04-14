@@ -1,73 +1,10 @@
 [
   {
-    "objectID": "cv.html",
-    "href": "cv.html",
-    "title": "Mandy Ma",
+    "objectID": "cv/cv.html",
+    "href": "cv/cv.html",
+    "title": "Resume",
     "section": "",
-    "text": "url here"
-  },
-  {
-    "objectID": "project/NLP/sup/Word2Vec.html",
-    "href": "project/NLP/sup/Word2Vec.html",
-    "title": "Mandy Ma",
-    "section": "",
-    "text": "3.2 Node2Vec:\n\nIntroduction -\nNode2vec is an algorithmic framework for representational learning on graphs. Given any graph, it can learn continuous feature representations for the nodes, which can then be used for various downstream machine learning tasks.\nCompared to the simple graph we have for Word2Vec, Node2vec can be applied to complexly structured graphs that are “ (un)directed, (un)weighted, or (a)cyclic.” To accomplish that, Node2vec generates biased random walks from each node of the graph. This provides a way of balancing the exploration-exploitation tradeoff by smoothly interpolating between BFS and DFS.\n\n\nImplementation -\nUsing random walks through the corpus, we created multiple documents as an input into the Gensim model for vectorizing embeddings using sentences. These embeddings were then analyzed using their corresponding graph clusters.\nThe purpose of random walks is to add context to the Application → API nodes, by looking at corresponding applications or APIs that are neighbors to the starting applications.\nIn the figure under node2vec above we clearly see the distinction between the two classes. On visualizing this on a 2-Dimensional plane it is now possible to use lighter classification models to help classify benign vs malware applications.\n\n\nAnalysis -\nSimilar to node2vec, a distinct number of hyperparameters and model choices influenced the project.\nThe following are a few hyperparameters that had a large impact on the performance of the model -\nWalk length: The count of nodes in each random walk P: Return hyperparameter - controlling the probability of going back to a previous node Q: Input hyperparameter - controlling the probability to traverse to undiscovered parts of the graph For node2vec, these parameters above greatly influence the sampling strategy and how specific they’re intended to be.\nSince the risk factor for misclassifying a malware app as benign is considerably high, we started testing the model and embeddings with a lower probability of backtracking or exploring different parts of the graph. Thus the window size of 2 and 1 respectively.\nOn running the model and creating sentences the graph below shows the distribution of each app from a 2D representation of the graph embeddings. A point represents an app in the graph.\n\nThen we use k-means clustering method to classify the apps from malware to benign apps. The graph below shows the result when k = 2, k=3, and k=4.(see pics below)\n\n\n\nk = 2\n\n\n\n\nHere is the accurate plot differentiating malware from benign apps:\n\nComparing the plots, we can see that k-means clustering provides insight into the natural clusters of the graph. As all the k-means clustering separates clusters horizontally, we can assume that more than 50% of APPs are misclassified. Misclassifying malware as a benign app could cause a huge loss, so K-means clustering isn’t a good algorithm for detecting malware. Looking at the second graph, we see a distinct boundary between the application types. Further analysis would look at different meta paths that could better identify this boundary in addition to classifiers to elevate the creation of decision boundaries.\nOn evaluating multiple classification models for Node2vec we found that Support Vector Machines provided us with the optimal Accuracy and recall tradeoff. We used Support Vector machines with the radial bias function(RBF) kernel, along with a higher than default regularization constant of 5. Performance of Node2Vec embeddings using an SVC -\n\n\n\nP\nQ\nWalk Length\nAccuracy\nF1 Score\n\n\n\n\n2\n1\n100\n94%\n0.92\n\n\n2\n2\n100\n94%\n0.92\n\n\n1\n2\n100\n91%\n0.91\n\n\n3\n3\n100\n89%\n0.88\n\n\n\nA similar observation can be made with the word2vec graph showing the difference between the two classes, here even a linear relationship could be identified between the two classes."
-  },
-  {
-    "objectID": "project/projects.html",
-    "href": "project/projects.html",
-    "title": "Projects",
-    "section": "",
-    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Updated - Oldest\n        \n         \n          Updated - Newest\n        \n     \n  \n\n\n\n\n\n\n\n\nThe Language of Malware\n\n\n4 min\n\n\nChunks of R and slithers of Python; in the caldron boil and bake\n\n\n\nMay 1, 2024\n\n\n\n\n\nApr 11, 2025\n\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Mandy Ma",
-    "section": "",
-    "text": "Experienced Software Engineer and Data Scientist specializing in Android Framework development, machine learning applications, and data automation. Proven track record in delivering efficient, scalable solutions that improve performance and user experience. Adept at developing robust ETL pipelines and software optimization strategies.\n\n\nColumbia University | New York, NY M.A in Quantitative Methods in Social Science | Sep 2022 - Feb 2024\nUniversity of California, San Diego | San Diego, CA B.S in Data Science | Sept 2017 - June 2021\n\n\n\nHonor Device Co., Ltd. | General Software Engineer | Apr 2024 – Jan 2025\nColumbia University | Research Assistant | Sept 2012 - Sep 2022 – Jan 2024\nLeishen Intelligent System Co., Ltd. | Global System Engineer | Jan 2022 – Aug 2022\nHuawei Technologies Co., Ltd. | Software Development Intern | Jun 2020 – Oct 2020"
-  },
-  {
-    "objectID": "index.html#education",
-    "href": "index.html#education",
-    "title": "Mandy Ma",
-    "section": "",
-    "text": "Columbia University | New York, NY M.A in Quantitative Methods in Social Science | Sep 2022 - Feb 2024\nUniversity of California, San Diego | San Diego, CA B.S in Data Science | Sept 2017 - June 2021"
-  },
-  {
-    "objectID": "index.html#experience",
-    "href": "index.html#experience",
-    "title": "Mandy Ma",
-    "section": "",
-    "text": "Honor Device Co., Ltd. | General Software Engineer | Apr 2024 – Jan 2025\nColumbia University | Research Assistant | Sept 2012 - Sep 2022 – Jan 2024\nLeishen Intelligent System Co., Ltd. | Global System Engineer | Jan 2022 – Aug 2022\nHuawei Technologies Co., Ltd. | Software Development Intern | Jun 2020 – Oct 2020"
-  },
-  {
-    "objectID": "contact.html",
-    "href": "contact.html",
-    "title": "I’d love to hear from you!",
-    "section": "",
-    "text": "You can find me online\nLinkedIn GitHub BlueSky.\nOr, you can drop me an e-mail at\nyuxumaaa@gmail.com"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "Mandy Ma",
-    "section": "",
-    "text": "Experienced Software Engineer and Data Scientist specializing in Android Framework development, machine learning applications, and data automation. Proven track record in delivering efficient, scalable solutions that improve performance and user experience. Adept at developing robust ETL pipelines and software optimization strategies.\n\n\nColumbia University | New York, NY M.A in Quantitative Methods in Social Science | Sep 2022 - Feb 2024\nUniversity of California, San Diego | San Diego, CA B.S in Data Science | Sept 2017 - June 2021\n\n\n\nHonor Device Co., Ltd. | General Software Engineer | Apr 2024 – Jan 2025\nColumbia University | Research Assistant | Sept 2012 - Sep 2022 – Jan 2024\nLeishen Intelligent System Co., Ltd. | Global System Engineer | Jan 2022 – Aug 2022\nHuawei Technologies Co., Ltd. | Software Development Intern | Jun 2020 – Oct 2020"
-  },
-  {
-    "objectID": "about.html#education",
-    "href": "about.html#education",
-    "title": "Mandy Ma",
-    "section": "",
-    "text": "Columbia University | New York, NY M.A in Quantitative Methods in Social Science | Sep 2022 - Feb 2024\nUniversity of California, San Diego | San Diego, CA B.S in Data Science | Sept 2017 - June 2021"
-  },
-  {
-    "objectID": "about.html#experience",
-    "href": "about.html#experience",
-    "title": "Mandy Ma",
-    "section": "",
-    "text": "Honor Device Co., Ltd. | General Software Engineer | Apr 2024 – Jan 2025\nColumbia University | Research Assistant | Sept 2012 - Sep 2022 – Jan 2024\nLeishen Intelligent System Co., Ltd. | Global System Engineer | Jan 2022 – Aug 2022\nHuawei Technologies Co., Ltd. | Software Development Intern | Jun 2020 – Oct 2020"
+    "text": "Download current Resume"
   },
   {
     "objectID": "project/NLP/index.html#introduction",
@@ -112,31 +49,66 @@
     "text": "6. Additional Information\nVideo Link to Our Presentation\nLink to Our Report\nLink to Further Read about Hindroid"
   },
   {
-    "objectID": "example.html",
-    "href": "example.html",
+    "objectID": "about.html",
+    "href": "about.html",
     "title": "Mandy Ma",
     "section": "",
-    "text": "Heading\n\n\nColumbia University | New York, NY M.A in Quantitative Methods in Social Science | Sep 2022 - Feb 2024\n\n\n\nHonor Device Co., Ltd. | General Software Engineer | Apr 2024 – Jan 2025\n\n\n\n\n\n\n\n\n\n TEXT"
+    "text": "Experienced Software Engineer and Data Scientist specializing in Android Framework development, machine learning applications, and data automation. Proven track record in delivering efficient, scalable solutions that improve performance and user experience. Adept at developing robust ETL pipelines and software optimization strategies."
   },
   {
-    "objectID": "example.html#education",
-    "href": "example.html#education",
+    "objectID": "about.html#education",
+    "href": "about.html#education",
     "title": "Mandy Ma",
-    "section": "",
-    "text": "Columbia University | New York, NY M.A in Quantitative Methods in Social Science | Sep 2022 - Feb 2024"
+    "section": "Education",
+    "text": "Education\nColumbia University | New York, NY M.A in Quantitative Methods in Social Science | Sep 2022 - Feb 2024\nUniversity of California, San Diego | San Diego, CA B.S in Data Science | Sept 2017 - June 2021"
   },
   {
-    "objectID": "example.html#experience",
-    "href": "example.html#experience",
+    "objectID": "about.html#experience",
+    "href": "about.html#experience",
     "title": "Mandy Ma",
-    "section": "",
-    "text": "Honor Device Co., Ltd. | General Software Engineer | Apr 2024 – Jan 2025"
+    "section": "Experience",
+    "text": "Experience\nHonor Device Co., Ltd. | General Software Engineer | Apr 2024 – Jan 2025\nColumbia University | Research Assistant | Sept 2012 - Sep 2022 – Jan 2024\nLeishen Intelligent System Co., Ltd. | Global System Engineer | Jan 2022 – Aug 2022\nHuawei Technologies Co., Ltd. | Software Development Intern | Jun 2020 – Oct 2020"
   },
   {
-    "objectID": "example.html#h2",
-    "href": "example.html#h2",
+    "objectID": "contact.html",
+    "href": "contact.html",
+    "title": "I’d love to hear from you!",
+    "section": "",
+    "text": "You can find me online\nLinkedIn GitHub BlueSky.\nOr, you can drop me an e-mail at\nyuxumaaa@gmail.com"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
     "title": "Mandy Ma",
     "section": "",
-    "text": "TEXT"
+    "text": "Experienced Software Engineer and Data Scientist specializing in Android Framework development, machine learning applications, and data automation. Proven track record in delivering efficient, scalable solutions that improve performance and user experience. Adept at developing robust ETL pipelines and software optimization strategies."
+  },
+  {
+    "objectID": "index.html#education",
+    "href": "index.html#education",
+    "title": "Mandy Ma",
+    "section": "Education",
+    "text": "Education\nColumbia University | New York, NY M.A in Quantitative Methods in Social Science | Sep 2022 - Feb 2024\nUniversity of California, San Diego | San Diego, CA B.S in Data Science | Sept 2017 - June 2021"
+  },
+  {
+    "objectID": "index.html#experience",
+    "href": "index.html#experience",
+    "title": "Mandy Ma",
+    "section": "Experience",
+    "text": "Experience\nHonor Device Co., Ltd. | General Software Engineer | Apr 2024 – Jan 2025\nColumbia University | Research Assistant | Sept 2012 - Sep 2022 – Jan 2024\nLeishen Intelligent System Co., Ltd. | Global System Engineer | Jan 2022 – Aug 2022\nHuawei Technologies Co., Ltd. | Software Development Intern | Jun 2020 – Oct 2020"
+  },
+  {
+    "objectID": "project/projects.html",
+    "href": "project/projects.html",
+    "title": "Projects",
+    "section": "",
+    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Updated - Oldest\n        \n         \n          Updated - Newest\n        \n     \n  \n\n\n\n\n\n\n\n\nThe Language of Malware\n\n\n4 min\n\n\nChunks of R and slithers of Python; in the caldron boil and bake\n\n\n\nMay 1, 2024\n\n\n\n\n\nApr 11, 2025\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "project/NLP/sup/Word2Vec.html",
+    "href": "project/NLP/sup/Word2Vec.html",
+    "title": "Mandy Ma",
+    "section": "",
+    "text": "3.2 Node2Vec:\n\nIntroduction -\nNode2vec is an algorithmic framework for representational learning on graphs. Given any graph, it can learn continuous feature representations for the nodes, which can then be used for various downstream machine learning tasks.\nCompared to the simple graph we have for Word2Vec, Node2vec can be applied to complexly structured graphs that are “ (un)directed, (un)weighted, or (a)cyclic.” To accomplish that, Node2vec generates biased random walks from each node of the graph. This provides a way of balancing the exploration-exploitation tradeoff by smoothly interpolating between BFS and DFS.\n\n\nImplementation -\nUsing random walks through the corpus, we created multiple documents as an input into the Gensim model for vectorizing embeddings using sentences. These embeddings were then analyzed using their corresponding graph clusters.\nThe purpose of random walks is to add context to the Application → API nodes, by looking at corresponding applications or APIs that are neighbors to the starting applications.\nIn the figure under node2vec above we clearly see the distinction between the two classes. On visualizing this on a 2-Dimensional plane it is now possible to use lighter classification models to help classify benign vs malware applications.\n\n\nAnalysis -\nSimilar to node2vec, a distinct number of hyperparameters and model choices influenced the project.\nThe following are a few hyperparameters that had a large impact on the performance of the model -\nWalk length: The count of nodes in each random walk P: Return hyperparameter - controlling the probability of going back to a previous node Q: Input hyperparameter - controlling the probability to traverse to undiscovered parts of the graph For node2vec, these parameters above greatly influence the sampling strategy and how specific they’re intended to be.\nSince the risk factor for misclassifying a malware app as benign is considerably high, we started testing the model and embeddings with a lower probability of backtracking or exploring different parts of the graph. Thus the window size of 2 and 1 respectively.\nOn running the model and creating sentences the graph below shows the distribution of each app from a 2D representation of the graph embeddings. A point represents an app in the graph.\n\nThen we use k-means clustering method to classify the apps from malware to benign apps. The graph below shows the result when k = 2, k=3, and k=4.(see pics below)\n\n\n\nk = 2\n\n\n\n\nHere is the accurate plot differentiating malware from benign apps:\n\nComparing the plots, we can see that k-means clustering provides insight into the natural clusters of the graph. As all the k-means clustering separates clusters horizontally, we can assume that more than 50% of APPs are misclassified. Misclassifying malware as a benign app could cause a huge loss, so K-means clustering isn’t a good algorithm for detecting malware. Looking at the second graph, we see a distinct boundary between the application types. Further analysis would look at different meta paths that could better identify this boundary in addition to classifiers to elevate the creation of decision boundaries.\nOn evaluating multiple classification models for Node2vec we found that Support Vector Machines provided us with the optimal Accuracy and recall tradeoff. We used Support Vector machines with the radial bias function(RBF) kernel, along with a higher than default regularization constant of 5. Performance of Node2Vec embeddings using an SVC -\n\n\n\nP\nQ\nWalk Length\nAccuracy\nF1 Score\n\n\n\n\n2\n1\n100\n94%\n0.92\n\n\n2\n2\n100\n94%\n0.92\n\n\n1\n2\n100\n91%\n0.91\n\n\n3\n3\n100\n89%\n0.88\n\n\n\nA similar observation can be made with the word2vec graph showing the difference between the two classes, here even a linear relationship could be identified between the two classes."
   }
 ]

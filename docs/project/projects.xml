@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>Mandy Ma</title>
+<link>https://yuxuanmaaa.github.io/project/projects.html</link>
+<atom:link href="https://yuxuanmaaa.github.io/project/projects.xml" rel="self" type="application/rss+xml"/>
+<description></description>
+<generator>quarto-1.6.42</generator>
+<lastBuildDate>Wed, 01 May 2024 04:00:00 GMT</lastBuildDate>
+<item>
+  <title>The Language of Malware</title>
+  <dc:creator>Mandy Ma</dc:creator>
+  <link>https://yuxuanmaaa.github.io/project/NLP/</link>
+  <description><![CDATA[ 
+
+
+
+
+<p><img src="https://yuxuanmaaa.github.io/project/NLP/images/android-malware.jpg" class="img-fluid" alt="android-malware"></p>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">1. Introduction</h2>
+<p>Are you using a Samsng, Huawei or Google phone? Are you aware that your phone is 50 times more likely to be hacked than an iphone which uses and IOS system? By July 2020, Android OS is still a leading mobile operating system that holds 74.6% of the market share worldwide, attracting numerous cyber-criminals who are targeting the largest crowd. Thus, developing a strong malware detection system becomes the number one priority.</p>
+</section>
+<section id="data-exploration" class="level2">
+<h2 class="anchored" data-anchor-id="data-exploration">2. Data Exploration</h2>
+<section id="data-source" class="level3">
+<h3 class="anchored" data-anchor-id="data-source">Data Source</h3>
+<p>The applications from the Android Play Store are reduced to a version of assembly code for Java-based applications called Dalvik bytecode. The APK’s that contain the smali code are directly downloaded from ‘https://apkpure.com/’ and compiled into .smali files using the apktools library. Thus, this data is then unpackaged using the apktools library that allows us to view the subsequent smali code (a code that humans can interpret) and app binaries. The smali code and app binaries contain a lot of the information derived from the Java source code that allows us to map the number of API calls and the relationships between them.</p>
+</section>
+</section>
+<section id="graph-embedding-techniques" class="level2">
+<h2 class="anchored" data-anchor-id="graph-embedding-techniques">3. Graph Embedding Techniques</h2>
+<p>Now that we’ve established base relationships across Apps and APIs through various adjacency matrices and baseline models. To better understand the relationships between API calls, and their subsequent properties we explore them through Graph Networks, their ability to learn and traverse, and the corresponding vectorized embeddings.</p>
+<section id="word2vec" class="level3">
+<h3 class="anchored" data-anchor-id="word2vec">3.1 Word2vec:</h3>
+<p>Word2Vec is one of the most popular techniques to learn word embeddings using a shallow neural network, developed by Tomas Mikolov in 2013 at Google. Word2vec learns the association among words from a large corpus of text, and it could be used to find synonymous words or suggest an additional word for an incomplete sentence using Skip Gram or Common Bag Of Words (CBOW).</p>
+<p><a href="../../project/NLP/sup/Word2Vec.html">Go to Word2Vec</a></p>
+</section>
+<section id="node2vec" class="level3">
+<h3 class="anchored" data-anchor-id="node2vec">3.2 Node2Vec:</h3>
+<p>Node2vec is an algorithmic framework for representational learning on graphs. Given any graph, it can learn continuous feature representations for the nodes, which can then be used for various downstream machine learning tasks.</p>
+<p>Compared to the simple graph we have for Word2Vec, Node2vec can be applied to complexly structured graphs that are “ (un)directed, (un)weighted, or (a)cyclic.” To accomplish that, Node2vec generates biased random walks from each node of the graph. This provides a way of balancing the exploration-exploitation tradeoff by smoothly interpolating between BFS and DFS.</p>
+<p>Go to Node2Vec</p>
+</section>
+<section id="metapath2vec" class="level3">
+<h3 class="anchored" data-anchor-id="metapath2vec">3.3 Metapath2vec</h3>
+<p>Compared to Word2Vec and Node2Vec which use homogeneous graph networks, Metapath2Vec uses heterogeneous graph networks. Heterogeneous graph networks allow us to distinguish different types of nodes and edges(relationship). In our case, using heterogeneous graph networks enable us to see the difference between API and APP nodes.</p>
+<p>On the other hand, similar to Node2Vec, Metapath2Vec takes random walks to “construct the heterogeneous neighborhood of a node” and then uses “a heterogeneous skip-gram model to perform node embeddings.”</p>
+<p>Go to Metapath2Vec</p>
+</section>
+</section>
+<section id="future-research" class="level2">
+<h2 class="anchored" data-anchor-id="future-research">4. Future Research</h2>
+<p>Shortcomings Primarily with the given resources and ability to scale, we reached our ability of applications and APIs we could have used. Ideally compared to a lot of academic research and papers, we would want to scale our dataset by a factor of 30 times. Future Research Primarily, in our project - we have 3 graph embedding techniques that are analyzed through their embeddings and models. These models could be expanded to be neural networks or architectures that better help predict embeddings than the current classification models.</p>
+<p>There are multiple graph embedding models and techniques that go far beyond the ones explored today. Additionally, the scalability and ability to hyper optimize these embeddings their corresponding models exist to a large degree.</p>
+<p>Additionally, the research of adversarial models through the lens of Graph Embeddings allows a whole new aspect of risk and exploration.</p>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">5. Conclusion</h2>
+<p>Overall, with a balance between feasibility of scaling and implementation, we found Node2vec most versatile, allowing us to retain accurate results while forming sentences and correlations that more closely represented the class division of applications. It is often easy to forget while analyzing and writing code, that at the end of it all it’s still a language. Using technology and models designed for linguistic semantics and structure and using it on the binaries of a programming language and application is a meta-analysis that adequately serves its purpose.</p>
+</section>
+<section id="additional-information" class="level2">
+<h2 class="anchored" data-anchor-id="additional-information">6. Additional Information</h2>
+<p><a href="https://www.youtube.com/watch?v=K-uCKlmn7SY">Video Link to Our Presentation</a></p>
+<p><a href="https://docs.google.com/document/d/1U0hxHL5boiFmCqgYs3B9EHoWOfzfpN6Px0at1zw71rI/edit">Link to Our Report</a></p>
+<p><a href="https://www.cse.ust.hk/~yqsong/papers/2017-KDD-HINDROID.pdf">Link to Further Read about Hindroid</a></p>
+
+
+</section>
+
+ ]]></description>
+  <category>python</category>
+  <category>Natural Language Processing</category>
+  <category>time series</category>
+  <guid>https://yuxuanmaaa.github.io/project/NLP/</guid>
+  <pubDate>Wed, 01 May 2024 04:00:00 GMT</pubDate>
+</item>
+</channel>
+</rss>

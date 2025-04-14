@@ -7,6 +7,7 @@ publish:
 
 website:
   title: "Mandy Ma"
+  site-url: "https://yuxuanmaaa.github.io" 
   navbar:
     left:
       - text: About You
@@ -14,7 +15,7 @@ website:
       - text: Projects
         href: project/projects.qmd
       - text: CV
-        href: cv.qmd
+        href: cv/cv.qmd
       - text: Contact
         href: contact.qmd
 

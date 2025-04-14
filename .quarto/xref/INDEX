@@ -28,5 +28,8 @@
   },
   "project/NLP/sup/Word2Vec.qmd": {
     "Word2Vec.html": "6c4047c3"
+  },
+  "cv/cv.qmd": {
+    "cv.html": "65d52bd6"
   }
 }

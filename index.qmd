@@ -4,7 +4,6 @@ image: images/headshot.jpg
 about:
   template: broadside
   links:
-
     - icon: github
       text: Github
       href: https://github.com
@@ -14,10 +13,7 @@ about:
     - icon: linkedin
       text: LinkedIn
       href: https://linkedin.com/in/yuxuan-ma
-      
 ---
-
-:::{#hero-heading}
 
 Experienced Software Engineer and Data Scientist specializing in Android Framework development, machine learning applications, and data automation. Proven track record in delivering efficient, scalable solutions that improve performance and user experience. Adept at developing robust ETL pipelines and software optimization strategies.
 
