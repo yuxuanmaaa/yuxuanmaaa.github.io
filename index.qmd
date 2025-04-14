@@ -1,5 +1,5 @@
 ---
-title: "Mandy Ma"
+title: "Mandy Maaaaa"
 image: images/headshot.jpg
 about:
   template: broadside
