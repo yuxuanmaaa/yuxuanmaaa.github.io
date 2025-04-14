@@ -1,6 +1,6 @@
 ---
 title: "Mandy Ma"
-image: pics/headshot.jpg
+image: images/headshot.jpg
 about:
   template: broadside
   links:
